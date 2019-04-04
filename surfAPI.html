@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Surf API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="surfAPI.css" type="text/css">
+
+</head>
+
+<body>
+    <h2>CA Surf Report</h2>
+
+    <div class="parallax-container">
+        <div class="parallax"><img
+                src="https://external-preview.redd.it/HHuH3Eyd5PcPjEOyRFtpIwZ59F87fgHvEw8rRiwuV2M.jpg?width=960&crop=smart&auto=webp&s=eeba126a9e6cb3b00bd136ea106745dc44670e47">
+        </div>
+    </div>
+
+    <form>
+        <div class="row container">
+            <div class="input-field col s6">
+                <select id="region">
+                    <option value="" disabled selected>California Regions</option>
+                    <option value="norcal">NorCal</option>
+                    <option value="central">Central</option>
+                    <option value="socal">SoCal</option>
+
+                </select>
+                <label>County</label>
+            </div>
+            <div id="norcal" class="input-field col s6 hidden">
+                <select class="county">
+                    <option class="norcal" value="" disabled selected>Choose your option</option>
+                    
+                    <option class="central" value="San Francisco">San Francisco</option>
+                </select>
+                <label>County</label>
+            </div>
+            <div id="central" class="input-field col s6 hidden">
+                <select class="county">
+
+                    <option class="central" value="San Mateo">San Mateo</option>
+                    <option class="central" value="Santa Cruz">Santa Cruz</option>
+                    <option class="central" value="Monterey">Monterey</option>
+                </select>
+                <label>County</label>
+            </div>
+            <div id="socal" class="input-field col s6 hidden">
+                <select class="county">
+                    <option class="socal" value="Santa Barbra">Santa Brabra</option>
+                    <option class="socal" value="Ventura">Ventura</option>
+                    <option class="socal" value="Los Angeles">Los Angeles</option>
+                    <option class="socal" value="Orange County">Orange County</option>
+                    <option class="socal" value="San Diego">San Diego</option>
+                </select>
+                <label>County</label>
+            </div>
+        </div>
+    </form>
+    <div class="container">
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="spots.js"></script>
+</body>
+
+
+</html>
